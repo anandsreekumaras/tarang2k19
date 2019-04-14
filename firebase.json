@@ -1,0 +1,29 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/webdesign",
+        "destination": "/webdesign.html"
+      },
+       {
+      "source": "**",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    },
+      {
+        "source": "**",
+        "destination": "/404.html"
+      }
+    ]
+  }
+}
